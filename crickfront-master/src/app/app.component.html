@@ -1,0 +1,168 @@
+<header class="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 shadow-lg">
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+        <div class="flex items-center space-x-4">
+            <img src="favicon.ico" alt="Logo" class="h-10 w-10 rounded-full border-2 border-white">
+            <span class="text-3xl font-extrabold text-white tracking-wide">
+                <span class="text-yellow-300">Know</span>About<span class="text-yellow-300">Cricket</span>
+            </span>
+        </div>
+        <nav class="hidden md:flex space-x-6">
+            <a [routerLink]="'/home'" href="#" class="text-white hover:text-yellow-300 font-semibold transition duration-300 ease-in-out transform hover:scale-105">Home</a>
+            <a [routerLink]="'/live'" href="#live" class="text-white hover:text-yellow-300 font-semibold transition duration-300 ease-in-out transform hover:scale-105">Live</a>
+            <a  [routerLink]="'/history'" href="#history" class="text-white hover:text-yellow-300 font-semibold transition duration-300 ease-in-out transform hover:scale-105">History</a>
+            <a [routerLink]="'/point-table'" href="#point-table" class="text-white hover:text-yellow-300 font-semibold transition duration-300 ease-in-out transform hover:scale-105">Point Table</a>
+        </nav>
+        <div></div>
+        <div class="md:hidden">
+            <button class="text-white focus:outline-none">
+                <!-- Hamburger Icon -->
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </div>
+    </div>
+</header>
+<!-- <button class="px-20 py-2 bg-red-500 hover:bg-red-600 rounded-full">Click me</button> -->
+<div class="px-28 py-10 flex-grow">
+<router-outlet></router-outlet>
+</div>
+
+<!-- <footer class="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white py-10">
+    <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-6">
+        <div class="mb-4 md:mb-0">
+            <h2 class="text-2xl font-bold text-yellow-300">KnowAboutCricket</h2>
+            <p class="mt-2 text-sm text-gray-300">
+                Your go-to source for all things cricket. Stay updated with the latest scores, news, and match analysis from around the world.
+            </p>
+            <div class="mt-4">
+                <img src="favicon.ico" alt="About Image" class="w-32 h-32 object-cover rounded-full border-2 border-white">
+            </div>
+        </div>
+        <div class="mb-4 md:mb-0">
+            <h3 class="text-xl font-semibold text-yellow-300">Quick Links</h3>
+            <ul class="mt-2 space-y-2">
+                <li><a [routerLink]="'/home'" href="#home" class="text-white hover:text-yellow-300 transition duration-300">Home</a></li>
+                <li><a [routerLink]="'/live'" href="#live" class="text-white hover:text-yellow-300 transition duration-300">Live Scores</a></li>
+                <li><a [routerLink]="'/history'" href="#history" class="text-white hover:text-yellow-300 transition duration-300">History</a></li>
+                <li><a [routerLink]="'/point-table'" href="#point-table" class="text-white hover:text-yellow-300 transition duration-300">Point Table</a></li>
+                <li><a [routerLink]="'/contact'" href="#contact" class="text-white hover:text-yellow-300 transition duration-300">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="mb-4 md:mb-0">
+            <h3 class="text-xl font-semibold text-yellow-300">Follow Us</h3>
+            <p class="mt-2 text-sm text-gray-300">Stay connected through our social media channels:</p>
+            <div class="flex mt-4 space-x-4">
+                <a href="#" class="text-white hover:text-yellow-300 transition duration-300">
+                    
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M22 12c0-5.514-4.486-10-10-10S2 6.486 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.99h-2.54v-2.888h2.54v-2.221c0-2.507 1.492-3.899 3.773-3.899 1.093 0 2.238.194 2.238.194v2.462h-1.26c-1.243 0-1.629.776-1.629 1.566v1.898h2.773l-.443 2.888h-2.33v6.99C18.343 21.128 22 16.991 22 12z"/>
+                    </svg>
+                </a>
+                <a href="#" class="text-white hover:text-yellow-300 transition duration-300">
+                   
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M24 4.556c-.883.392-1.83.656-2.825.775 1.014-.608 1.794-1.569 2.163-2.717-.95.565-2.005.977-3.127 1.195-.896-.954-2.173-1.555-3.592-1.555-2.717 0-4.92 2.203-4.92 4.917 0 .385.045.761.128 1.122C7.688 8.094 4.066 6.13 1.64 3.161c-.423.722-.666 1.561-.666 2.456 0 1.697.865 3.194 2.178 4.073-.804-.025-1.562-.247-2.228-.617v.062c0 2.368 1.684 4.345 3.918 4.79-.41.111-.843.171-1.287.171-.315 0-.622-.03-.922-.085.624 1.953 2.444 3.377 4.6 3.416-1.684 1.319-3.808 2.105-6.102 2.105-.396 0-.787-.023-1.175-.068 2.176 1.397 4.768 2.21 7.548 2.21 9.058 0 14.012-7.513 14.012-14.018 0-.213-.004-.426-.014-.637.961-.693 1.795-1.56 2.457-2.548l-.047-.02z"/>
+                    </svg>
+                </a>
+                <a href="#" class="text-white hover:text-yellow-300 transition duration-300">
+                   
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2.162c3.204 0 3.584.012 4.85.07 1.17.054 2.23.26 3.078.554a6.49 6.49 0 0 1 2.347 1.535 6.49 6.49 0 0 1 1.535 2.347c.294.847.5 1.908.554 3.078.058 1.266.07 1.646.07 4.85 0 3.204-.012 3.584-.07 4.85-.054 1.17-.26 2.23-.554 3.078a6.49 6.49 0 0 1-1.535 2.347 6.49 6.49 0 0 1-2.347 1.535c-.847.294-1.908.5-3.078.554-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.17-.054-2.23-.26-3.078-.554a6.49 6.49 0 0 1-2.347-1.535 6.49 6.49 0 0 1-1.535-2.347c-.294-.847-.5-1.908-.554-3.078C2.174 15.584 2.162 15.204 2.162 12c0-3.204.012-3.584.07-4.85.054-1.17.26-2.23.554-3.078a6.49 6.49 0 0 1 1.535-2.347 6.49 6.49 0 0 1 2.347-1.535c.847-.294 1.908-.5 3.078-.554 1.266-.058 1.646-.07 4.85-.07zm0 1.837c-3.175 0-3.563.01-4.821.068-1.127.052-1.882.243-2.41.404a4.679 4.679 0 0 0-1.694.995 4.679 4.679 0 0 0-.995 1.694c-.161.528-.352 1.283-.404 2.41-.058 1.258-.068 1.646-.068 4.821 0 3.175.01 3.563.068 4.821.052 1.127.243 1.882.404 2.41a4.679 4.679 0 0 0 .995 1.694 4.679 4.679 0 0 0 1.694.995c.528.161 1.283.352 2.41.404 1.258.058 1.646.068 4.821.068s3.563-.01 4.821-.068c1.127-.052 1.882-.243 2.41-.404a4.679 4.679 0 0 0 1.694-.995 4.679 4.679 0 0 0 .995-1.694c.161-.528.352-1.283.404-2.41.058-1.258.068-1.646.068-4.821s-.01-3.563-.068-4.821c-.052-1.127-.243-1.882-.404-2.41a4.679 4.679 0 0 0-.995-1.694 4.679 4.679 0 0 0-1.694-.995c-.528-.161-1.283-.352-2.41-.404-1.258-.058-1.646-.068-4.821-.068zm0 3.162c2.84 0 5.143 2.303 5.143 5.143s-2.303 5.143-5.143 5.143-5.143-2.303-5.143-5.143 2.303-5.143 5.143-5.143zm0 8.59a3.447 3.447 0 1 0 0-6.895 3.447 3.447 0 0 0 0 6.895zm6.406-8.641a1.39 1.39 0 1 0 0-2.78 1.39 1.39 0 0 0 0 2.78z"/>
+                    </svg>
+                </a>
+                <a href="#" class="text-white hover:text-yellow-300 transition duration-300">
+               
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20.447 20.452H16.87v-5.372c0-1.281-.025-2.931-1.795-2.931-1.798 0-2.073 1.402-2.073 2.846v5.457h-3.576V9h3.431v1.561h.05c.478-.9 1.645-1.848 3.387-1.848 3.619 0 4.292 2.383 4.292 5.48v6.259zM5.337 7.433a2.077 2.077 0 1 1-.043-4.154 2.077 2.077 0 0 1 .043 4.154zM6.539 20.452H4.137V9h2.402v11.452zM22.225 0H1.771C.792 0 0 .768 0 1.717v20.566C0 23.23.792 24 1.771 24h20.451C23.207 24 24 23.23 24 22.283V1.717C24 .768 23.207 0 22.225 0z"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+        <div class="mb-4 md:mb-0">
+            <h3 class="text-xl font-semibold text-yellow-300">Contact Us</h3>
+            <ul class="mt-2 space-y-2 text-gray-300">
+                <li>Email: contactknowaboutcricket.com</li>
+                <li>Phone: +123 456 7890</li>
+                <li>Address: 123 Cricket Lane, Sports City, World</li>
+            </ul>
+            <h3 class="text-xl font-semibold text-yellow-300 mt-4">Subscribe to our newsletter</h3>
+            <form class="mt-2 flex">
+                <input type="email" placeholder="Your email address" class="w-full p-2 rounded-l-md border border-white bg-gray-700 text-white focus:outline-none">
+                <button class="p-2 bg-yellow-300 text-gray-900 font-semibold rounded-r-md">Subscribe</button>
+            </form>
+        </div>
+    </div>
+    <div class="container mx-auto px-6 mt-4 border-t border-gray-500 pt-4 text-sm text-gray-300 text-center">
+        &copy; 2024 KnowAboutCricket. All rights reserved.
+    </div>
+</footer> -->
+<footer class="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white py-10">
+    <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-6">
+        <div class="mb-4 md:mb-0">
+            <h2 class="text-2xl font-bold text-yellow-300">KnowAboutCricket</h2>
+            <p class="mt-2 text-sm text-gray-300">
+                Your go-to source for all things cricket. Stay updated with the latest scores, news, and match analysis from around the world.
+            </p>
+            <div class="mt-4">
+                <img src="favicon.ico" alt="About Image" class="w-32 h-32 object-cover rounded-full border-2 border-white">
+            </div>
+        </div>
+        <div class="mb-4 md:mb-0">
+            <h3 class="text-xl font-semibold text-yellow-300">Quick Links</h3>
+            <ul class="mt-2 space-y-2">
+                <li><a [routerLink]="'/home'" href="#home" class="text-white hover:text-yellow-300 transition duration-300">Home</a></li>
+                <li><a [routerLink]="'/live'" href="#live" class="text-white hover:text-yellow-300 transition duration-300">Live Scores</a></li>
+                <li><a [routerLink]="'/history'" href="#history" class="text-white hover:text-yellow-300 transition duration-300">History</a></li>
+                <li><a [routerLink]="'/point-table'" href="#point-table" class="text-white hover:text-yellow-300 transition duration-300">Point Table</a></li>
+                <li><a [routerLink]="'/contact'" href="#contact" class="text-white hover:text-yellow-300 transition duration-300">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="mb-4 md:mb-0">
+            <h3 class="text-xl font-semibold text-yellow-300">Follow Us</h3>
+            <p class="mt-2 text-sm text-gray-300">Stay connected through our social media channels:</p>
+            <div class="flex mt-4 space-x-4">
+                <a href="#" class="text-white hover:text-yellow-300 transition duration-300">
+                    <!-- Facebook Icon -->
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M22 12c0-5.514-4.486-10-10-10S2 6.486 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.99h-2.54v-2.888h2.54v-2.221c0-2.507 1.492-3.899 3.773-3.899 1.093 0 2.238.194 2.238.194v2.462h-1.26c-1.243 0-1.629.776-1.629 1.566v1.898h2.773l-.443 2.888h-2.33v6.99C18.343 21.128 22 16.991 22 12z"/>
+                    </svg>
+                </a>
+                <a href="#" class="text-white hover:text-yellow-300 transition duration-300">
+                    <!-- Twitter Icon -->
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M24 4.556c-.883.392-1.83.656-2.825.775 1.014-.608 1.794-1.569 2.163-2.717-.95.565-2.005.977-3.127 1.195-.896-.954-2.173-1.555-3.592-1.555-2.717 0-4.92 2.203-4.92 4.917 0 .385.045.761.128 1.122C7.688 8.094 4.066 6.13 1.64 3.161c-.423.722-.666 1.561-.666 2.456 0 1.697.865 3.194 2.178 4.073-.804-.025-1.562-.247-2.228-.617v.062c0 2.368 1.684 4.345 3.918 4.79-.41.111-.843.171-1.287.171-.315 0-.622-.03-.922-.085.624 1.953 2.444 3.377 4.6 3.416-1.684 1.319-3.808 2.105-6.102 2.105-.396 0-.787-.023-1.175-.068 2.176 1.397 4.768 2.21 7.548 2.21 9.058 0 14.012-7.513 14.012-14.018 0-.213-.004-.426-.014-.637.961-.693 1.795-1.56 2.457-2.548l-.047-.02z"/>
+                    </svg>
+                </a>
+                <a href="#" class="text-white hover:text-yellow-300 transition duration-300">
+                    <!-- Instagram Icon -->
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2.162c3.204 0 3.584.012 4.85.07 1.17.054 2.23.26 3.078.554a6.49 6.49 0 0 1 2.347 1.535 6.49 6.49 0 0 1 1.535 2.347c.294.847.5 1.908.554 3.078.058 1.266.07 1.646.07 4.85 0 3.204-.012 3.584-.07 4.85-.054 1.17-.26 2.23-.554 3.078a6.49 6.49 0 0 1-1.535 2.347 6.49 6.49 0 0 1-2.347 1.535c-.847.294-1.908.5-3.078.554-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.17-.054-2.23-.26-3.078-.554a6.49 6.49 0 0 1-2.347-1.535 6.49 6.49 0 0 1-1.535-2.347c-.294-.847-.5-1.908-.554-3.078C2.174 15.584 2.162 15.204 2.162 12c0-3.204.012-3.584.07-4.85.054-1.17.26-2.23.554-3.078a6.49 6.49 0 0 1 1.535-2.347 6.49 6.49 0 0 1 2.347-1.535c.847-.294 1.908-.5 3.078-.554 1.266-.058 1.646-.07 4.85-.07zm0 1.837c-3.175 0-3.563.01-4.821.068-1.127.052-1.882.243-2.41.404a4.679 4.679 0 0 0-1.694.995 4.679 4.679 0 0 0-.995 1.694c-.161.528-.352 1.283-.404 2.41-.058 1.258-.068 1.646-.068 4.821 0 3.175.01 3.563.068 4.821.052 1.127.243 1.882.404 2.41a4.679 4.679 0 0 0 .995 1.694 4.679 4.679 0 0 0 1.694.995c.528.161 1.283.352 2.41.404 1.258.058 1.646.068 4.821.068s3.563-.01 4.821-.068c1.127-.052 1.882-.243 2.41-.404a4.679 4.679 0 0 0 1.694-.995 4.679 4.679 0 0 0 .995-1.694c.161-.528.352-1.283.404-2.41.058-1.258.068-1.646.068-4.821s-.01-3.563-.068-4.821c-.052-1.127-.243-1.882-.404-2.41a4.679 4.679 0 0 0-.995-1.694 4.679 4.679 0 0 0-1.694-.995c-.528-.161-1.283-.352-2.41-.404-1.258-.058-1.646-.068-4.821-.068zm0 3.162c2.84 0 5.143 2.303 5.143 5.143s-2.303 5.143-5.143 5.143-5.143-2.303-5.143-5.143 2.303-5.143 5.143-5.143zm0 8.59a3.447 3.447 0 1 0 0-6.895 3.447 3.447 0 0 0 0 6.895zm6.406-8.641a1.39 1.39 0 1 0 0-2.78 1.39 1.39 0 0 0 0 2.78z"/>
+                    </svg>
+                </a>
+                <a href="#" class="text-white hover:text-yellow-300 transition duration-300">
+                    <!-- LinkedIn Icon -->
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20.447 20.452H16.87v-5.372c0-1.281-.025-2.931-1.795-2.931-1.798 0-2.073 1.402-2.073 2.846v5.457h-3.576V9h3.431v1.561h.05c.478-.9 1.645-1.848 3.387-1.848 3.619 0 4.292 2.383 4.292 5.48v6.259zM5.337 7.433a2.077 2.077 0 1 1-.043-4.154 2.077 2.077 0 0 1 .043 4.154zM6.539 20.452H4.137V9h2.402v11.452zM22.225 0H1.771C.792 0 0 .768 0 1.717v20.566C0 23.23.792 24 1.771 24h20.451C23.207 24 24 23.23 24 22.283V1.717C24 .768 23.207 0 22.225 0z"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+        <div class="mb-4 md:mb-0">
+            <h3 class="text-xl font-semibold text-yellow-300">Contact Us</h3>
+            <ul class="mt-2 space-y-2 text-gray-300">
+                <li>Email: contactknowaboutcricket.com</li>
+                <li>Phone: +123 456 7890</li>
+                <li>Address: 123 Cricket Lane, Sports City, World</li>
+            </ul>
+            <h3 class="text-xl font-semibold text-yellow-300 mt-4">Subscribe to our newsletter</h3>
+            <form class="mt-2 flex">
+                <input type="email" placeholder="Your email address" class="w-full p-2 rounded-l-md border border-white bg-gray-700 text-white focus:outline-none">
+                <button class="p-2 bg-yellow-300 text-gray-900 font-semibold rounded-r-md">Subscribe</button>
+            </form>
+        </div>
+    </div>
+    <div class="container mx-auto px-6 mt-4 border-t border-gray-500 pt-4 text-sm text-gray-300 text-center">
+        &copy; 2024 KnowAboutCricket. All rights reserved.
+    </div>
+</footer>
